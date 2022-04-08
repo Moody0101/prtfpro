@@ -1,0 +1,122 @@
+/* HERO SECTION.... */
+
+.Home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin: 30px 0;
+    width: 85%;
+}
+
+.Hero > img {
+	height: 350px;
+	animation: revealright 1s ease-in-out;
+}
+.Hero > div {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.Hero > div div.Buttons_, .Hero div div.sm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 20px 0;
+}
+
+.Hero div div.sm {
+	padding: 0;
+	height: 50px;
+	margin: 0;
+}
+
+.Hero div h1 {
+	font-weight: 800;
+    -webkit-text-stroke-width: 1px;
+    font-size: 70px;
+    margin: 0;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    background: none;
+    transition: all 1s ease-in;
+    animation: ShowUp 1s ease-in-out;
+}
+
+.Hero div div.sm a img {
+	width: 40px;
+	animation: revealleft 1s ease;
+}
+
+
+.Hero div div.Buttons_ a {
+	text-decoration: none;
+	padding: 20px;
+	border-radius:  5px;
+	animation: ShowUp 1s ease-in-out;
+}
+
+.Hero div div.Buttons_ a:nth-child(1) {
+	background: white;
+	color: black;
+	border: 1px solid white;
+
+}
+
+.Hero div div.Buttons_ a:nth-child(2) {
+	background: rgb(0, 0, 50);
+}
+
+.Hero div div.Buttons_ a:nth-child(2),.Hero div div.sm a:nth-child(2) img {
+	margin: 0 30px;
+}
+
+/* Hover effects */
+
+
+.Hero div div.Buttons_ a:nth-child(1):hover {
+	background: black;
+	color:  white;
+}
+.Hero div div.Buttons_ a:nth-child(2):hover {
+	background: rgb(0, 0, 100);
+}
+
+.Hero div div.sm a img:hover {
+	transform: scale(0.7);
+}
+
+/* Media queries */
+
+@media screen and (max-width: 900px){
+	.Hero > img {  
+		display: none; 
+	}
+	.Hero {
+		justify-content: flex-start;
+		width: 90%;
+		padding: 10px;
+	}
+	.Hero div div.Buttons_ { 
+		flex-direction: column;
+		align-items: flex-start;
+		/* margin: 10px 0; */
+	}
+	.Hero div div.Buttons_ a {
+		margin: 10px 0 !important;
+	}
+	.Hero div h1 { 
+		font-size: 50px;
+	 }
+}
+

@@ -1,0 +1,189 @@
+@keyframes ShowUp {
+	0% {
+		opacity: 0;
+		transform: translateY(5px);
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes ShowUp__ {
+	0% {
+		opacity: 0;
+		
+	}
+	100% {
+		
+		opacity: 1;
+	}
+}
+
+@keyframes ShowUp_ {
+	0% {
+		opacity: 0;
+		transform: translateY(5px);
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	100% {
+		opacity: 1;
+		display: none;
+
+	}
+}
+
+@keyframes ShowUp_2 {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@keyframes showError {
+	0% {
+		opacity: 0;
+		top: -100px;
+	}
+	50% {
+
+		opacity: .5;
+		
+	}
+	100% {
+		opacity: 1;	
+	}
+}
+
+.hidingAnimation {
+	transform: translateY(-400px);
+	display: none;
+	animation: showUp_ 1s ease !important;
+	opacity: 0;
+}
+
+@keyframes ShowDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	50% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes HumbergerAnimation {
+	0% {
+		transform: scaleX(0);
+
+	}
+	100% {
+		transform: scaleX(1);	
+	}
+}
+
+
+@keyframes NavHide {
+	0% {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+}
+
+@keyframes NavShow {
+	0% {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scaleX(1);
+		opacity: 1;
+	}	
+}
+
+@keyframes revealright {
+	0% {
+		transform: translateX(10px);
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+
+
+
+@keyframes revealleft {
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+
+/* Making classes to apply the animation dynamically using JS */
+
+.revealLeft {
+	animation: revealleft 1.5s ease;
+	opacity: 1;
+	display: block !important;
+}
+
+.revealRight {
+	animation: revealright 1.5s ease;
+	opacity: 1;
+	display: block !important;
+}
+
+.revealLeft2 {
+	animation: revealleft 1.5s ease;
+	opacity: 1;
+	display: flex !important;
+}
+
+.revealRight2 {
+	animation: revealright 1.5s ease;
+	opacity: 1;
+	display: flex !important;
+}
+
+.revealBottom {
+	animation: ShowDown 1.5s ease;
+	display: block !important;
+	opacity: 1;
+}
+
+.revealUp {
+	animation: ShowUp 1s ease;
+	transform: translateY(-10px);
+	opacity: 1 !important;
+	display: block !important;
+}

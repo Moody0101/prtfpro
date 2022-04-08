@@ -1,0 +1,96 @@
+
+
+#loading {
+ 	margin:  0;
+ 	padding:  0;
+ 	position: absolute;
+ 	top:  0;
+ 	left: 0;
+ 	z-index: 10000;
+ 	height: 100vh;
+ 	width:  100vw;
+ 	display:  flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	background: black;
+ 	flex-direction: column;
+ }
+.container {
+ 	width: 50vw;
+ 	height: 150px;
+ 	padding: 10px;
+	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	/* background: white; */
+ 	flex-direction: column;
+
+}
+.container h2 {
+	color:  white;
+	font-family: "Myriad Pro", sans-serif;
+	font-weight: 300;
+	text-align: center;
+	transition: color 0.5s ease;
+}
+#loading .container img {
+	width:  40px;
+}
+.load {
+ 	width: 300px;
+    height: 3px;
+ 	background-color: #191919;
+ 	border-radius:  1px;
+ 	position: relative;
+}
+.load::before {
+	content: "";
+	width:  0%;
+	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    transition: height, width 1s ease;
+    animation: loading 4s ease infinite;
+}
+/* Animation. */
+@keyframes loading {
+	0% {
+		width:  0%;
+		
+	}
+	10% {
+		background: blue;
+	}
+	25% {
+		width:  25%;
+		background: blue;
+	}
+		50% {
+		width:  60%;
+		background: white;	
+	}
+	75% {
+		width:  60%;
+		background: white;
+	}
+	90% {
+		width: 90%;
+	}
+		100% {
+		background: white;
+		width:  100%;
+		
+	}
+}
+
+/* Media query. */
+@media screen and (max-width: 789px) {
+	body .load {
+ 		width: 50vw;
+ 	}
+}
+
+
+

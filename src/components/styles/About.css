@@ -1,0 +1,41 @@
+.About {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.About .innerAbout {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 85%;
+}
+
+.About .innerAbout > h2 {
+	color: transparent;
+    -webkit-text-stroke-width: 1px;
+    margin: 25px 0;
+    -webkit-text-stroke-color: white;
+    transition: all 1s ease-in;
+    animation: ShowUp 1s ease-in-out;
+}
+
+
+
+.About .innerAbout .ToolsImages {
+	display: grid;
+	grid-gap: 30px;
+	width: 70%;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: auto auto auto auto auto;
+	margin: 10px 0;
+}
+
+
+.About .innerAbout .ToolsImages img {
+	width: 60px;
+
+}
