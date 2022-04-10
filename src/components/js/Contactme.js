@@ -82,7 +82,7 @@ const Contact = () => {
 			.then((data) => {
 				message.current.nextElementSibling.style.color = "yellow";
 				message.current.nextElementSibling.style.margin = "15px 0";
-				message.current.nextElementSibling.textContent = "Sent, thanks " + data.name + "I will contact you as quick as possible :)";
+				message.current.nextElementSibling.textContent = "Sent, thanks " + data.name + " I will contact you as quick as possible :)";
 			})
 			.catch((e) =>{
 				message.current.nextElementSibling.textContent = e;
