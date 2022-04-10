@@ -39,6 +39,17 @@ nav div ul li:nth-child(3),
 nav div ul li:nth-child(4) {
     margin:  0 30px;
 }
+nav div ul li .BlogButton {
+    background: #3234c7;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    
+}
+
+nav div ul li:nth-child(1) a {
+    color: #0984e3;
+}
 
 
 nav div ul li a {
@@ -51,9 +62,16 @@ nav div ul li a {
 
 
 
-nav div ul li a:hover {
+nav div ul li a.LINK:hover {
     color: #0984e3;
 }
+
+
+nav div ul li .BlogButton:hover {
+    background: white;
+    color: black;
+}
+
 
 #HAMBMENU {
     display: none;
@@ -95,6 +113,7 @@ nav div ul li a:hover {
         align-items: center;
         animation: NavHide .3s ease;
         transform: scaleX(0);
+        z-index: 1000000;
        /*  transform: translateY(100px); */
         /* background: black; */
     }
@@ -136,7 +155,7 @@ nav div ul li a:hover {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        z-index: 10000;
+        z-index: 1000000;
         width: 40px;
         height: 40px;
         background: none;
@@ -145,6 +164,7 @@ nav div ul li a:hover {
         position:  fixed;
         top: 10px;
         right:  10px;
+
     }
     #HAMBMENU.active_ {
         background: black !important;

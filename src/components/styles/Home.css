@@ -1,6 +1,6 @@
 /* HERO SECTION.... */
 
-.Home {
+.Home, .art {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,10 +16,12 @@
     width: 85%;
 }
 
+
 .Hero > img {
 	height: 350px;
 	animation: revealright 1s ease-in-out;
 }
+
 .Hero > div {
 	display: flex;
 	justify-content: center;
@@ -93,7 +95,7 @@
 }
 
 .Hero div div.sm a img:hover {
-	transform: scale(0.7);
+	transform: scale(1.1);
 }
 
 /* Media queries */
@@ -120,3 +122,38 @@
 	 }
 }
 
+
+
+
+.art .innerArt {
+	display: grid;
+	grid-gap: 40px;
+
+	width: 85%;
+	margin: 40px 0;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto auto;
+	/* margin: 10px auto; */
+}
+
+
+
+.art .innerArt img {
+	border-radius: 10px;
+} 
+
+@media screen and (max-width: 900px){
+	.art .innerArt {
+		width: 90%;
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto auto auto;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.art .innerArt {
+		width: 90%;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto auto auto;
+	}
+}

@@ -1,3 +1,12 @@
+@keyframes dance {
+	0% {
+		transform: rotate(10deg) translateX(10px);
+	}
+	100% {
+		transform: rotate(-10deg) translateX(-10px);
+	}
+}
+
 @keyframes ShowUp {
 	0% {
 		opacity: 0;
@@ -186,4 +195,46 @@
 	transform: translateY(-10px);
 	opacity: 1 !important;
 	display: block !important;
+}
+
+/* form Loading animation */
+
+
+@keyframes internal {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  25% {
+    stroke-dashoffset: 80;
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(360deg);
+  }
+}
+
+
+.loader {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        padding: 5px;
+        transform: rotate(-90deg);
+        stroke-linecap: round;
+        stroke-width: 4;
+        fill: none;
+        display: none;
+}
+
+.loader.active_animation {
+        display: block;
+}
+
+.loader .external-circle {
+        stroke: #fff;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    stroke-dasharray: 187;
+    animation: internal 1s ease-in-out infinite;
+    opacity: 1;
 }

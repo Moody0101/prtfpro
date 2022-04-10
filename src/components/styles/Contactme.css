@@ -1,0 +1,81 @@
+.Contact {
+	width: 85%;
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+}
+
+.Contact .Form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.Contact .Form div {
+	width: 350px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+.Contact .Form .validator {
+	color: red;
+	font-weight: 300;
+}
+
+
+.Contact .Form input[type="text"],
+.Contact .Form input[type="Email"],
+.Contact .Form textarea,
+.Contact .Form .validator {
+	width: 350px;
+}
+
+.Contact .Form input[type="text"],
+.Contact .Form input[type="Email"],
+.Contact .Form textarea {
+	margin: 10px 0;
+	
+	padding: 10px;
+	background: none;
+	outline: none;
+	border: .5px solid #2e3333;
+	border-radius: 5px;
+}
+
+.Contact .Form textarea {
+	resize: none;
+	height: 200px;
+}
+
+.Contact .Form input[type="text"]:focus,
+.Contact .Form input[type="Email"]:focus,
+.Contact .Form textarea {
+	/* border-color: #404a4a; */
+	border-color: #4e9131;
+}
+
+ .Contact .Form div input[type="submit"] {
+    background: #3234c7;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Contact .Form div input[type="submit"]:hover {
+    background: #161780;
+}
+
+
+@media screen and (max-width: 700px;) {
+	.Contact .Form input[type="text"],
+	.Contact .Form input[type="Email"],
+	.Contact .Form textarea {
+		width: 100%;
+	}
+}

@@ -1,3 +1,8 @@
+/* 
+This file imports all the styling that the application needs.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 @import './components/styles/Animations.css';
 @import './components/styles/Nav.css';
 @import './components/styles/Home.css';
@@ -5,13 +10,15 @@
 @import './components/styles/About.css';
 @import './components/styles/Work.css';
 @import './components/styles/Loader.css';
+@import './components/styles/Footer.css';
+@import './components/styles/Contactme.css';
+@import './components/styles/pageNotFound.css';
 
 * {
 	scroll-behavior: smooth;
     font-family: "Poppins", "Ubuntu", sans-serif;
 	box-sizing: border-box;
 	color: white;
-
 }
 
 .App {
@@ -43,11 +50,10 @@ nav, section {
 	width: 100%;
 }
 
-a, h1, h2, p, div, nav, img {
+
+a, h1, h2, p, div, nav, img, input {
 	transition: all 1s ease;
 }
-
-
 
 a {
 	cursor: pointer

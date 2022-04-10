@@ -1,7 +1,7 @@
 import { importAll, isInviewPort } from './util';
 import { useState, useEffect } from 'react';
 
-import Fade from 'react-reveal/Fade'
+
 
 const r = importAll(require.context('../assets/icons/tools', false, /\.(svg)$/));
 
@@ -11,8 +11,7 @@ export default function About() {
 
  	return (
  		<section className="About">
- 				<Fade bottom cascade>
-
+ 				
 	 			<div className="innerAbout">
 	 				
 		 			<h2> Who am I, what I do </h2>
@@ -37,7 +36,6 @@ export default function About() {
 		 				}
 		 			</div>
  				</div>
- 				</Fade>
  		</section>
  			
  	)
