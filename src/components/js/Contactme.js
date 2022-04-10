@@ -74,15 +74,19 @@ const Contact = () => {
 			}
 
 			fetch('/addNew', OPTIONS)
-			.then(() => {
-				message.current.nextElementSibling.style.color = "yellow";
-				message.current.nextElementSibling.textContent = "Sent";
+			.then((data) => {
+				const data = res.json();
+				return data;
 			})
-			
+			.then((data) => {
+				message.current.nextElementSibling.style.color = "yellow";
+				message.current.nextElementSibling.margin = "15px 0";
+				message.current.nextElementSibling.textContent = $`Sent, thanks {data.name} have a lovely day`;
+			})
 			.catch((e) =>{
 				message.current.nextElementSibling.textContent = e;
 			})
-			
+
 			.finally(() => {
 				setLoadingAnimationState(false);
 			})
