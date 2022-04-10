@@ -39,5 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://portfolio-message-collector.herokuapp.com"
+  "proxy": "http://portfolio-message-collector.herokuapp.com"
 }

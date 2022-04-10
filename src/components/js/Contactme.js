@@ -2,7 +2,6 @@ import Fade from 'react-reveal/Fade';
 import { useState, useRef, useEffect } from 'react';
 import { LoadingAnimation } from "./util";
 
-
 const Contact = () => {
 
 	const email = useRef('');
@@ -15,11 +14,9 @@ const Contact = () => {
 		Message: ""
 	});
 
-	const [ErrorHandlers, setErrorHandlers] = useState(null);
-
 	const [loadingAnimationState, setLoadingAnimationState] = useState(false)
 
-	useEffect(()=> {
+	useEffect(() => {
 		setState({
 			fullName: name.current.value,
 			Email: email.current.value,
@@ -46,19 +43,23 @@ const Contact = () => {
 
 		Object.keys(state).map((key) => {
 
-			if(state[key].length == 0) {
+			if(state[key].length === 0) {
 				switch(key) {
 					case "fullName":
 						name.current.nextElementSibling.textContent = "Empty Full Name field";
+						break
 					case "Email":
 						email.current.nextElementSibling.textContent = "Empty email field";
+						break
 					case "Message":
 						message.current.nextElementSibling.textContent = "Empty message field";
+						break
+					default:
+						console.log("!");
 				}
-
 				OK = false;
 			}
-
+			return;
 		});
 
 		if(OK) {
@@ -74,14 +75,14 @@ const Contact = () => {
 			}
 
 			fetch('/addNew', OPTIONS)
-			.then((data) => {
+			.then((res) => {
 				const data = res.json();
 				return data;
 			})
 			.then((data) => {
 				message.current.nextElementSibling.style.color = "yellow";
-				message.current.nextElementSibling.margin = "15px 0";
-				message.current.nextElementSibling.textContent = $`Sent, thanks {data.name} have a lovely day`;
+				message.current.nextElementSibling.style.margin = "15px 0";
+				message.current.nextElementSibling.textContent = "Sent, thanks " + data.name + "I will contact you as quick as possible :)";
 			})
 			.catch((e) =>{
 				message.current.nextElementSibling.textContent = e;
