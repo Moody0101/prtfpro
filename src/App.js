@@ -14,11 +14,9 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 const App = () => {
 
   useEffect(() => {
-    window.onload = () => {
       setTimeout(() => {
         document.getElementsByClassName('App')[0].classList.add('loaded');
-      }, 5000);
-    }
+      }, 3000);
   }, []);
 
   return (

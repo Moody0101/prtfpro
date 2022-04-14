@@ -1,9 +1,26 @@
 import Fade from 'react-reveal/Fade';
 import { useState, useRef, useEffect } from 'react';
-import { LoadingAnimation } from "./util";
+import { LoadingAnimation, importAll } from "./util";
+
+
+const MoreArt = () => {
+	const [more, setArt] = useState(importAll(require.context('../assets/Illustrations/more', false, /\.(svg)$/)));
+	return (
+		<div className="moreArt">
+			{
+				Object.keys(more).map((key_, i) => {
+					return (
+						<Fade bottom cascade key={i}>
+							<img src={more[key_]} alt={key_}/>
+						</Fade>
+					)
+				})
+			}
+		</div>)
+}
 
 const Contact = () => {
-
+	
 	const email = useRef('');
 	const message = useRef('');
 	const name = useRef('');
@@ -22,9 +39,6 @@ const Contact = () => {
 			Email: email.current.value,
 			Message: message.current.value
 		});
-
-		
-
 	}, [])
 
 	const handleChange = () => {
@@ -102,14 +116,17 @@ const Contact = () => {
 
  	return (
 		<section className="Contact">
-			<Fade left cascade>
+			<Fade right cascade>
 				<form onSubmit={submit} className="Form">
 					<h2>contact me</h2>
-					<input ref={name} onChange={handleChange} type="text" value={state.fullName.value} placeholder="Full Name" name="Name"/>
+					<label>Full name</label>
+					<input ref={name} onChange={handleChange} type="text" value={state.fullName.value} placeholder="" name="Name"/>
 					<span className="validator"></span>
-					<input ref={email} onChange={handleChange} type="Email" value={state.Email.value} placeholder="Email" name="Email"/>
+					<label>Email</label>
+					<input ref={email} onChange={handleChange} type="Email" value={state.Email.value} placeholder="" name="Email"/>
 					<span className="validator"></span>
-					<textarea ref={message} onChange={handleChange} type="text" value={state.Message.value} placeholder="Message" name="Message" className="MSG"/>
+					<label>Message</label>
+					<textarea ref={message} onChange={handleChange} type="text" value={state.Message.value} placeholder="" name="Message" className="MSG"/>
 					<span className="validator"></span>
 					<div>
 						<input type="submit"/> 
@@ -117,6 +134,7 @@ const Contact = () => {
 					</div>
 				</form>
 			</Fade>
+			<MoreArt />
 		</section>
  	)
 }

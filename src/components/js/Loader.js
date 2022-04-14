@@ -8,9 +8,11 @@ export default function Loader() {
 	const loader = useRef("");
 
 	useEffect(() => {
-		setTimeout(() => {
-			loader.current.style.display = 'none';
-		}, 4000);
+		window.onload = () => {
+			setTimeout(() => {
+				loader.current.style.display = 'none';
+			}, 4000);
+		}
 	}, []);
 
  	return (

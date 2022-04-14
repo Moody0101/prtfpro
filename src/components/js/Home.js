@@ -5,31 +5,29 @@ import instagram from '../assets/icons/brands/insta.svg';
 import About from './About';
 import Contact from './Contactme';
 import {importAll} from './util';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
 
-const r = importAll(require.context('../assets/Illustrations/art', false, /\.(svg|png)$/));
-const Art = () => { 
-	
-	const [images, setImages] = useState(r);
+
+const Art = () => {
+
+	const [images, setImages] = useState(importAll(require.context('../assets/Illustrations/art', false, /\.(svg|png)$/)));
 
 	return (
 		<section className="art">
 			
 				<div className="innerArt">
-					
-						{
-							Object.keys(images).map((key_, i) => {
-								return (
-									<Fade bottom cascade key={i}>
-										<img src={images[key_]} alt={key_}/> 
-									</Fade>
-								)
-							})
-						}
-					
+					{
+						Object.keys(images).map((key_, i) => {
+							return (
+								<Fade bottom cascade key={i}>
+									<img src={images[key_]} alt={key_}/>
+								</Fade>
+							)
+						})
+					}					
 				</div>
 			
 		</section>
@@ -37,11 +35,14 @@ const Art = () => {
 }
 
 const Hero = () => {
+	const button_ = useRef("");
 
-	// VanillaTilt.init(document.querySelector(".Herocontainer"), {
-	//     max: 16,
-	//     speed: 10
-	// });
+	useEffect(() => {
+		button_.current.onclick = () => {
+			document.querySelector(".Form").scrollIntoView();
+		};
+	}, [])
+
 
 	return (
 		<div className="Hero">
@@ -56,8 +57,8 @@ const Hero = () => {
 					products
 				</h1>
 				<div className="Buttons_">
-					<a href="/"> Let’s wrok! together </a>
-					<a href="/"> Want my cv ? </a>
+					<button ref={button_}> Get in touch! </button>
+					<a target="blank_" href="http://portfolio-message-collector.herokuapp.com/getCv"> Want my cv ? </a>
 				</div>
 				<div className="sm">
 					<a  target="blank_" href="https/github.com/Moody0101"><img src={github} alt="GithubLink"/></a>

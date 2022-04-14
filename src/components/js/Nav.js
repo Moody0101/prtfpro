@@ -4,13 +4,16 @@ import logo from "../assets/icons/brands/POPI.svg";
 import { useRef } from 'react';
 import { NavLink } from "react-router-dom";
 
+import { navigate } from './util';
+
+
 const Nav = () => {
 
 	const menu = useRef(null);	
 	
 	const Clicked = (e) => {
 		e.target.style.color = "#0984e3";
-		
+		navigate();
 		for(let i = 0; i < document.getElementsByClassName("LINK").length; i++) {
 			if(document.getElementsByClassName("LINK")[i] !== e.target) {
 				document.getElementsByClassName("LINK")[i].style.color = "white";

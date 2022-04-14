@@ -1,8 +1,8 @@
-
 import Fade from 'react-reveal/Fade';
 
 
-export default function Work() {
+
+const Work = () => {
 	return (
 		<section className="Work">
 			<div className="innerWork">
@@ -11,3 +11,6 @@ export default function Work() {
 		</section>
 	)
 }
+
+
+export default Work;

@@ -51,11 +51,11 @@ nav, section {
 }
 
 
-a, h1, h2, p, div, nav, img, input {
+a, h1, h2, p, div, nav, img, input, button {
 	transition: all 1s ease;
 }
 
-a {
+a, button {
 	cursor: pointer
 }
 

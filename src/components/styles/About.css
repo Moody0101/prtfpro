@@ -42,8 +42,8 @@
 @media screen and (max-width: 700px) {
 	.About .innerAbout .ToolsImages	{
 		grid-template-rows: auto auto auto auto auto;
-		grid-template-columns: auto auto auto;
-		grid-gap: 50px;
+		grid-template-columns: auto auto auto auto;
+		grid-gap: 40px;
 
 	}
 }

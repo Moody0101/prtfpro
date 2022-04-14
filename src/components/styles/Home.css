@@ -7,13 +7,15 @@
 	flex-direction: column;
 }
 
+
 .Hero {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: row;
-	margin: 30px 0;
+	margin: 85px 0;
     width: 85%;
+
 }
 
 
@@ -34,22 +36,24 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	margin: 20px 0;
+	margin: 30px 0;
 }
 
 .Hero div div.sm {
 	padding: 0;
 	height: 50px;
-	margin: 0;
+	margin: 20px 0;
 }
 
 .Hero div h1 {
 	font-weight: 800;
     -webkit-text-stroke-width: 1px;
-    font-size: 70px;
+    font-size: 60px;
     margin: 0;
+    line-height: 70px;
     -webkit-text-stroke-color: white;
     color: transparent;
+    font-family: "Poppins";
     background: none;
     transition: all 1s ease-in;
     animation: ShowUp 1s ease-in-out;
@@ -61,18 +65,24 @@
 }
 
 
-.Hero div div.Buttons_ a {
+.Hero div div.Buttons_ a,
+.Hero div div.Buttons_ button {
 	text-decoration: none;
 	padding: 20px;
 	border-radius:  5px;
 	animation: ShowUp 1s ease-in-out;
 }
 
-.Hero div div.Buttons_ a:nth-child(1) {
+.Hero div div.Buttons_ button {
+	border: none;
+	outline: none;
+}
+.Hero div div.Buttons_ button:nth-child(1) {
 	background: white;
 	color: black;
 	border: 1px solid white;
-
+	font-weight: 600;
+	font-size: 16px;
 }
 
 .Hero div div.Buttons_ a:nth-child(2) {
@@ -86,7 +96,7 @@
 /* Hover effects */
 
 
-.Hero div div.Buttons_ a:nth-child(1):hover {
+.Hero div div.Buttons_ button:nth-child(1):hover {
 	background: black;
 	color:  white;
 }
@@ -151,6 +161,9 @@
 }
 
 @media screen and (max-width: 500px) {
+	.Hero {
+		margin: 40px 0;
+	}
 	.art .innerArt {
 		width: 90%;
 		grid-template-columns: auto auto;
