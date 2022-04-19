@@ -69,7 +69,6 @@
 .Hero div div.Buttons_ button {
 	text-decoration: none;
 	padding: 20px;
-	border-radius:  5px;
 	animation: ShowUp 1s ease-in-out;
 }
 
@@ -170,3 +169,27 @@
 		grid-template-rows: auto auto auto auto;
 	}
 }
+
+.Designs {
+	width: 85%;
+}
+.Designs > img.kitty {
+	width: 100%;
+}
+
+
+
+.Designs > div {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.Designs > div img {
+	width: 100px;
+	margin: 20px 0;
+}
+
+/* .Designs > div img {width: 20%} */

@@ -3,12 +3,12 @@ import twitter from '../assets/icons/brands/twitter.svg';
 import github from '../assets/icons/brands/github.svg';
 import instagram from '../assets/icons/brands/insta.svg';
 import About from './About';
+import { Designs } from './WorkSections';
 import Contact from './Contactme';
 import {importAll} from './util';
 import {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
-
 
 
 const Art = () => {
@@ -75,6 +75,9 @@ const Home = () => {
 	return (
 		<section className="Home">
 			<Hero />
+			
+				<Designs />
+			
 			<Art />
 			<Contact />
 		</section>
