@@ -192,4 +192,13 @@
 	margin: 20px 0;
 }
 
-/* .Designs > div img {width: 20%} */
+@media screen and (min-width: 700px) {
+	.Designs > img.kitty {
+		display: none;
+	}
+
+	.Designs > div img {
+	width: 25%;
+	margin: 20px 0;
+}	
+}

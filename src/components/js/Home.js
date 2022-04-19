@@ -2,12 +2,10 @@ import hero from '../assets/Illustrations/hero/Hero.svg';
 import twitter from '../assets/icons/brands/twitter.svg';
 import github from '../assets/icons/brands/github.svg';
 import instagram from '../assets/icons/brands/insta.svg';
-import About from './About';
 import { Designs } from './WorkSections';
 import Contact from './Contactme';
 import {importAll} from './util';
 import {useState, useEffect, useRef} from 'react';
-import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
 
@@ -16,21 +14,20 @@ const Art = () => {
 	const [images, setImages] = useState(importAll(require.context('../assets/Illustrations/art', false, /\.(svg|png)$/)));
 
 	return (
-		<section className="art">
-			
-				<div className="innerArt">
-					{
-						Object.keys(images).map((key_, i) => {
-							return (
-								<Fade bottom cascade key={i}>
-									<img src={images[key_]} alt={key_}/>
-								</Fade>
-							)
-						})
-					}					
-				</div>
-			
-		</section>
+	<section className="art">
+
+		<div className="innerArt">
+			{
+				Object.keys(images).map((key_, i) => {
+					return (
+						<Fade bottom cascade key={i}>
+							<img src={images[key_]} alt={key_}/>
+						</Fade>
+					)
+				})
+			}
+		</div>
+	</section>
 	)
 }
 

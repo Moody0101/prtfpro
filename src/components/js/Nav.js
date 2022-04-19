@@ -46,8 +46,6 @@ const Nav = () => {
 			                <li><NavLink onClick={Clicked} className="LINK" to="/About"> About me </NavLink></li>
 			                <li><a target="blank_" className="BlogButton" href="https://moodyyb.netlify.app/"> Blog </a></li>
 			        	</ul>
-		            
-
 		        	<button id="HAMBMENU" onClick={ShowNav}>
 		        		<span></span>
 		        		<span></span>

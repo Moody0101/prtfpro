@@ -95,7 +95,7 @@ nav div ul li .BlogButton:hover {
         width: 100%;
     } */
     
-    nav div .menu {
+    nav .innerNavContainer .menu {
         margin: 0;
         top: 0;
         right: 0;
@@ -104,7 +104,7 @@ nav div ul li .BlogButton:hover {
         opacity: 0;
         flex-direction: column;
         height: 100vh;
-        background: none;
+        background: red;
         position: fixed;
         transform-origin: right;
         transition: all .3s ease;
@@ -113,18 +113,17 @@ nav div ul li .BlogButton:hover {
         align-items: center;
         animation: NavHide .3s ease;
         transform: scaleX(0);
-        z-index: 1000000;
+        z-index: 100;
        /*  transform: translateY(100px); */
         /* background: black; */
     }
 
-
     nav div .menu li {
         transition: all 1s ease;
-        width: 100%;
-        margin: 10px;
+        margin: 15px auto;
     }
-    nav div .menu.ActiveNav li a {
+    nav div .menu.ActiveNav li a.LINK {
+
         color: black !important;
     }
     nav div .menu.ActiveNav li a {
@@ -133,10 +132,20 @@ nav div ul li .BlogButton:hover {
         cursor: pointer;
         font-size: 40px;
     }
+    nav div .menu.ActiveNav li a.BlogButton {
+        color: white;
+    }
 
+    /* nav div .menu li {
+        background: red;
+    } */
+    nav div .menu.ActiveNav li a.BlogButton:hover {
+        background: #0000EE;
+    }
 
     nav div .menu li a:hover {
         color: #0984e3;
+
     }
 
 
@@ -166,6 +175,7 @@ nav div ul li .BlogButton:hover {
         right:  10px;
 
     }
+
     #HAMBMENU.active_ {
         background: black !important;
     }
