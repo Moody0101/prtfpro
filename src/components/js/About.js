@@ -18,12 +18,17 @@ export default function About() {
 					
 
 		 			<p>
-						 			hello, I am hossin, a self-taught front-end engineer,  graphic designer and artist based
-						in Morocco. I build real world web applications, I design high quality and modern UIs and 
-						graphics, I also enjoy  scripting using various programming languages such as 
-						Python, Javascript and C++.
-						I am fueled with alot of dreams and ambitions of my own, I love science, technology 
-						and music.
+						<p>
+							Hi, I am hossin, a self-taught full-stack engineer, UI/UX designer, and probably
+							an artist.
+						</p>
+						<p>
+							I like everything computer related,
+							I like making software in a daily basis using python, javascript or c++.
+						</p>
+						<p>
+							I love what I am doing.	
+						</p>	
 		 			</p>
 		 			
 		 				<h2> What I use</h2>

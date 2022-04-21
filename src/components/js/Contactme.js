@@ -2,9 +2,9 @@ import Fade from 'react-reveal/Fade';
 import { useState, useRef, useEffect } from 'react';
 import { LoadingAnimation, importAll } from "./util";
 
-
 const MoreArt = () => {
 	const [more, setArt] = useState(importAll(require.context('../assets/Illustrations/more', false, /\.(svg)$/)));
+	
 	return (
 		<div className="moreArt">
 			{
@@ -88,9 +88,10 @@ const Contact = () => {
 		       body: JSON.stringify(state)
 			}
 
-			fetch('/addNew', OPTIONS)
+			fetch("/addNew", OPTIONS)
 			.then((res) => {
 				const data = res.json();
+				console.log(data);
 				return data;
 			})
 			.then((data) => {

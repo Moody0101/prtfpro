@@ -32,4 +32,5 @@ const navigate = () => {
     window.scrollTo(0, 0);
 }
 
+
 export { importAll, isInviewPort, navigate, LoadingAnimation };

@@ -120,12 +120,13 @@ nav div ul li .BlogButton:hover {
 
     nav div .menu li {
         transition: all 1s ease;
-        margin: 15px auto;
+        margin: 25px auto;
     }
     nav div .menu.ActiveNav li a.LINK {
 
         color: black !important;
     }
+
     nav div .menu.ActiveNav li a {
         padding: 0 20px;
         text-align: center;
@@ -133,15 +134,22 @@ nav div ul li .BlogButton:hover {
         font-size: 40px;
     }
     nav div .menu.ActiveNav li a.BlogButton {
+        background: white;
+        color:  #000000;
+        border: 1px solid #000000;
+        padding: 10px 40px;
+    }
+    nav div .menu.ActiveNav li a.BlogButton:hover {
+        background: black;
         color: white;
     }
 
     /* nav div .menu li {
         background: red;
     } */
-    nav div .menu.ActiveNav li a.BlogButton:hover {
+    /* nav div .menu.ActiveNav li a.BlogButton:hover {
         background: #0000EE;
-    }
+    } */
 
     nav div .menu li a:hover {
         color: #0984e3;
